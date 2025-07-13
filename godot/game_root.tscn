@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpsx5hiuelceq"]
+
+[ext_resource type="Script" uid="uid://8b61rmbuvf4q" path="res://GameRoot.cs" id="1_xj5yv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_xj5yv"]
+size = Vector2(2, 2)
+
+[sub_resource type="MultiMesh" id="MultiMesh_pjpa4"]
+mesh = SubResource("QuadMesh_xj5yv")
+
+[node name="GameRoot" type="Node2D"]
+script = ExtResource("1_xj5yv")
+
+[node name="Cloud" type="MultiMeshInstance2D" parent="."]
+multimesh = SubResource("MultiMesh_pjpa4")
